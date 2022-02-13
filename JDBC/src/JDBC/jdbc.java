@@ -41,11 +41,13 @@ public class jdbc {
 		    st.executeQuery(query7);
 		    ResultSet rs2=st.executeQuery(query7);
 		    while(rs1.next()) {
-		System.out.println(rs1.getString( 1));
-		System.out.println(rs1.getString( 2));
-		System.out.println(rs1.getString( 3));
-		System.out.println(rs1.getString( 4));
-		System.out.println(rs1.getString( 5));
+			   String movname = rs1.getString("name");
+               String actname = rs1.getString("actor");
+               String actresname= rs1.getString("actress");
+               String dirname= rs1.getString("director");
+               int yrofrelease= rs1.getInt("year");
+               System.out.println(movname + "\t\t" + actname
+                                  + "\t\t" + actresname+"\t\t" +dirname+"\t\t" +yrofrelease);
 		   }
 		    
 		    	String movname=rs2.getString("name");
