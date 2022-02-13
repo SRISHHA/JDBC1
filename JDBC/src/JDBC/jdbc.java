@@ -40,7 +40,13 @@ public class jdbc {
 		    String query7="select name from movies where actor='dhanush'";
 		    st.executeQuery(query7);
 		    ResultSet rs2=st.executeQuery(query7);
-		   rs2.next( );
+		    while(rs1.next()) {
+		System.out.println(rs1.getString( 1));
+		System.out.println(rs1.getString( 2));
+		System.out.println(rs1.getString( 3));
+		System.out.println(rs1.getString( 4));
+		System.out.println(rs1.getString( 5));
+		   }
 		    
 		    	String movname=rs2.getString("name");
 		    System.out.println(movname);
